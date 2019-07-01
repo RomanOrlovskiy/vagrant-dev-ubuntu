@@ -12,8 +12,8 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install -y unzip git-core vim curl wget build-essential
 
 # Ansible
-sudo apt-get install -y ansible python-pip
-pip install boto
+sudo apt-get install -y ansible python-pip python3-pip
+pip install boto boto3
 
 
 # Install docker and docker compose
