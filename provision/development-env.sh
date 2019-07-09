@@ -9,12 +9,13 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 
 # Install base soft
 #sudo apt-get install python-minimal -y
-sudo apt-get install -y unzip git-core vim curl wget build-essential
+sudo apt-get install -y unzip git-core vim curl wget build-essential zip
+
+sudo apt install maven
 
 # Ansible
 sudo apt-get install -y ansible python-pip python3-pip
 pip install boto boto3
-
 
 # Install docker and docker compose
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -45,5 +46,6 @@ sudo mv terraform /usr/local/bin/terraform12
 terraform11 -version
 terraform12 -version
 
-# Install awscli
+# Install awscli and SAM for serverless applications
 sudo apt install awscli -y
+pip install --user aws-sam-cli

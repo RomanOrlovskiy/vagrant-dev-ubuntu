@@ -7,6 +7,7 @@ Vagrant.configure(2) do |config|
     ubuntu1804.vm.network "private_network", ip: "192.168.10.10"
     ubuntu1804.vm.synced_folder "~/Documents/projects", "/vagrant_data"
     ubuntu1804.vm.synced_folder "~/.ssh/keys", "/home/vagrant/.ssh/keys"
+    ubuntu1804.disksize.size = '30GB'
         
     ubuntu1804.vm.provider "virtualbox" do |vb|
       vb.memory = 4048
