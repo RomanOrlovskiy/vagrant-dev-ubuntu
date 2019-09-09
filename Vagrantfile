@@ -12,6 +12,7 @@ Vagrant.configure(2) do |config|
     ubuntu1804.vm.provider "virtualbox" do |vb|
       vb.memory = 4048
       vb.cpus = 2
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     end
 
     ubuntu1804.vm.provision "shell", path: "provision/development-env.sh"
